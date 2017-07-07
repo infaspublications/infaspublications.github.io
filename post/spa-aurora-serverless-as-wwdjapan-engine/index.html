@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/spa-aurora-serverless-as-wwdjapan-engine/cover.png"/>
+    
+
+
+
+<meta name="twitter:title" content="ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス &middot; INFAS PUBLICATIONS Developer Blog" />
+  	<meta property="og:site_name" content="INFAS PUBLICATIONS Developer Blog" />
+  	<meta property="og:url" content="https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/" />
+
+    
+       <meta property="og:image" content="/images/spa-aurora-serverless-as-wwdjapan-engine/cover.png"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="0001-01-01T00:00:00Z" />
+
+    
+    <meta property="article:tag" content="AWS" />
+    
+    <meta property="article:tag" content="SPA" />
+    
+    <meta property="article:tag" content="Aurora" />
+    
+    <meta property="article:tag" content="Serverless" />
+    
+    <meta property="article:tag" content="CloudFront" />
+    
+    <meta property="article:tag" content="S3" />
+    
+    <meta property="article:tag" content="Lambda" />
+    
+    <meta property="article:tag" content="API Gateway" />
+    
+    <meta property="article:tag" content="SSR" />
+    
+    <meta property="article:tag" content="Continuous Delivery" />
+    
+    
+
+    <title>ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス &middot; INFAS PUBLICATIONS Developer Blog</title>
+
+    
+    <meta name="description" content="こんにちは。INFASパブリケーションズでチーフエンジニアをやっている aggre です。主にWWD JAPAN.comというニュースメディアをチームで開発しています。
+INFASパブリケーションズは、ファッション専門業界紙「WWD JAPAN」や、そのウェブ版として2012年にローンチした「WWD JAPAN.com" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="/index.xml" rel="alternate" type="application/rss+xml" title="INFAS PUBLICATIONS Developer Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.24.1" />
+
+    <link rel="canonical" href="https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス,
+    "name": ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス,
+    "wordCount": 142,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/,
+    "datePublished": 0001-01-01T00:00Z,
+    "dateModified": 0001-01-01T00:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": https://infaspublications.github.io//images/spa-aurora-serverless-as-wwdjapan-engine/cover.png,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": AWS, SPA, Aurora, Serverless, CloudFront, S3, Lambda, API Gateway, SSR, Continuous Delivery,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-34906528-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/spa-aurora-serverless-as-wwdjapan-engine/cover.png)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="0001-01-01T00:00:00Z">
+            Jan 1, 0001
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/aws/">#AWS</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/spa/">#SPA</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/aurora/">#Aurora</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/serverless/">#Serverless</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/cloudfront/">#CloudFront</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/s3/">#S3</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/lambda/">#Lambda</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/api-gateway/">#API Gateway</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/ssr/">#SSR</a></span>
+         
+          <span class="post-tag small"><a href="https://infaspublications.github.io/tags/continuous-delivery/">#Continuous Delivery</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>こんにちは。INFASパブリケーションズでチーフエンジニアをやっている aggre です。主にWWD JAPAN.comというニュースメディアをチームで開発しています。</p>
+
+<p>INFASパブリケーションズは、ファッション専門業界紙「WWD JAPAN」や、そのウェブ版として2012年にローンチした「WWD JAPAN.com」を運営している会社です。ほかにカルチャー誌「STUDIO VOICE」も発行しています。ちなみに「WWD JAPAN」の母体である「WWD」はアメリカで1910年に創刊した結構歴史のある業界紙だったりします。</p>
+
+<h2 id="spaとauroraとサーバーレス">SPAとAuroraとサーバーレス</h2>
+
+<p>現在、WWD JAPAN.comではフロントエンドをSPA( Single Page Application )、バックエンドをDB以外はサーバーレスアーキテクチャにしています。</p>
+
+<p>サーバーレスアーキテクチャの定義については <a href="https://aws.amazon.com/jp/serverless/">AWSによる説明</a> が分かりやすいです。</p>
+
+<p>データベースはAuroraを使っているのでサーバーレスではありません。ここ、詳しくは後述します！</p>
+
+<p><img src="/images/spa-aurora-serverless-as-wwdjapan-engine/architecture.png" alt="Architecture" /></p>
+
+<p>この図はWWD JAPAN.comのアーキテクチャを俯瞰したものです。</p>
+
+<p>管理者しかアクセスしないエリアを除くと、CloudFront+S3+API Gateway+Lambdaによる構成で、これはウェブサービスにおける最小構成のサーバーレスアーキテクチャではないかと思います。</p>
+
+<p>記者などの管理者専用画面として、WordPressをEC2で運用していますが、フロントエンドはSPAになっているので管理者以外がEC2にアクセスすることはありません。</p>
+
+<p>これからの計画として、SPAのPWA( Progressive Web App )への移行や、Auroraを代替するデータベースへの移行を進めたいと考えています。</p>
+
+<p>現時点においてそれぞれのサービスをWWD JAPAN.comがどのように使っているのか見ていきます。</p>
+
+<h2 id="cloudfront">CloudFront</h2>
+
+<p><code>https://www.wwdjapan.com</code> 以下すべてのリクエストをはじめに受け取ります。そのためにRoute53のALIASレコードをCloudFrontに設定してあります。</p>
+
+<p>CloudFrontではSSL暗号化と、リクエストに合ったオリジンへの転送をします。基本的にはS3かAPI Gatewayへの転送をすることになります。</p>
+
+<p><code>/dist/*</code> だったらS3へ、それ以外はAPI Gatewayへ、という具合です。API Gatewayへの転送はSSR( Server Side Rendering )のためですね。</p>
+
+<p><img src="/images/spa-aurora-serverless-as-wwdjapan-engine/cloudfront.png" alt="CloudFront" /></p>
+
+<h2 id="s3">S3</h2>
+
+<p>フロントエンドで動作するSPAのソースコードと、画像などのアセットを保管しています。</p>
+
+<p>フロントエンドがSPAになることによって、アプリケーションは静的なHTML, JavaScript, CSS, manifest.json などのテキストファイル <strong>だけ</strong> で成立します。WWD JAPAN.comではソースコード管理にGitLabのクラウドを使っていますが、デプロイはビルドプロセスを経た成果物をGitLab CIの中からS3に送るだけです。デプロイが高速になって継続的デリバリーにも貢献しています。GitLab CIのパフォーマンス次第ではありますが平均して2分くらいでデプロイができます。</p>
+
+<p><img src="/images/spa-aurora-serverless-as-wwdjapan-engine/s3.png" alt="S3" /></p>
+
+<h2 id="lambda">Lambda</h2>
+
+<p>SPAからの要求にJSONをレスポンスしたり、SSRを実行します。</p>
+
+<p>認証の必要なAPIは認証用のLambdaにJWT( JSON Web Token )で生成したトークンを渡すことでLambdaだけで完結させています。認証にJWTを使うことでデータベースへのアクセスが不要となりました。</p>
+
+<p>WWD JAPAN.comではLambdaに2つのエイリアスを設定しています。 <code>production</code> と <code>dev</code> というエイリアスです。</p>
+
+<p>また、大きく2つのタイプのLambda関数群があります。単体で動作する標準的なAPIのためのLambda関数と、特定のユーザーエクスペリエンスのためのAPI（いわゆるBackend for Frontend, BFF）のためのLambda関数です。BFFタイプのLambda関数は独立タイプのLambda関数のラッパーになっています。もちろん、標準的なケースなら独立タイプのLambda関数だけを使用することもできます。</p>
+
+<p><img src="/images/spa-aurora-serverless-as-wwdjapan-engine/lambda.png" alt="Lambda" /></p>
+
+<h2 id="api-gateway">API Gateway</h2>
+
+<p>HTTPリクエストとLambdaに渡すオブジェクトをマッピングして、Lambdaからのレスポンスをクライアントに返します。</p>
+
+<p>Lambdaのタイプ毎にAPI（これはAWSコンソールにおける”API”です！）も分けています。例えば、<code>api</code> というAPIと、<code>api-for-wwd</code> のようなAPIに分かれます。</p>
+
+<p>Lambda関数のエイリアスに合わせて、API毎のステージも2つあります。WWD JAPAN.comでは、<code>production</code> を呼び出す <code>stable</code> と、<code>dev</code> を呼び出す <code>unstable</code> という具合です。</p>
+
+<p>また、常に最新の情報が担保されなくても良い結果整合性のAPIが多いので、API GatewayをオリジンとしたCloudFrontでキャッシュしています。API Gatewayにもキャッシュ機能はありますが、CloudFrontと異なり時間課金になるため注意が必要です。</p>
+
+<p><img src="/images/spa-aurora-serverless-as-wwdjapan-engine/api-gateway.png" alt="API Gateway" /></p>
+
+<h2 id="aurora">Aurora</h2>
+
+<p>AuroraはMySQL互換のリレーショナルデータベースで、サーバーレスとは異なりインスタンスが常時起動しています。</p>
+
+<p>ここだけサーバーレスではないのですが、複雑で未知なクエリを数ms〜数十msでレスポンスするためにはリレーショナルデータベースが必要だったのです。そして私はサーバーレスなリレーショナルデータベースというソリューションをまだ発見できずにいます。その答えはBigQueryでしょうか？もしも知っていたらコメント欄などで教えてください！</p>
+
+<p>完全なサーバーレスにするためには、いまのところデータベースはデータウェアハウス系のサービスかNoSQLという選択肢になります。平常時のレスポンスを最優先と考えた上でAuroraを代替できるものがあれば、そちらへの移行を実施したいと思ってます。</p>
+
+<h3 id="aurora-のパフォーマンス">Aurora のパフォーマンス</h3>
+
+<p>Auroraはサーバーレスではありませんが、それでも十分な可用性を備えています。WWD JAPAN.comでは1つのWriterインスタンスのほかマルチAZにある2つのReaderレプリカを使っています。リクエストは自動的に分散され、自動フェイルオーバーによってインスタンスの変更/削除も無停止で実施できます。</p>
+
+<p>AuroraはAPIのバックエンドで接続されていて、APIは毎日平均100万前後のリクエストがあります。そのうち60%前後がキャッシュされているので、再計算されるAPIリクエストは毎日40万くらいです。 Auroraはすべて <code>r3.xlarge</code> クラスのインスタンスで構成していて、平均CPU使用率が16%前後、もっともCPU使用率の高いインスタンスでもCPU使用率が平均30%前後に収まっています。セレクトのレイテンシーは平均11.7msです。</p>
+
+<h2 id="ssr">SSR</h2>
+
+<p>SSR( Server Side Rendering )の必要性について賛否はありますが、ニュースメディアでは必須要件になるのではないでしょうか。</p>
+
+<p>JavaScriptによるウェブアプリケーションは、Googleでなら正当に評価されますが、FacebookやTwitterにおいては意図しない評価を受けてしまいます。ニュースメディアをクロールして自動的にコンテンツを収集する類のサービスでも同様です。</p>
+
+<p>つまり、SSRの賛否についてしばしばトピックになる応答性などよりも、まずコンテンツが正当な評価を受けるためにSSRが必要になるということです。</p>
+
+<p>すべてのリクエストをひとつのLambdaで処理する</p>
+
+<p>WWD JAPAN.comではLambdaでSSRを実行しています。</p>
+
+<p>そのためには、 <code>/*</code> のような曖昧なリクエストをひとつのLambdaに送る必要があります。このようなケースで有効なのがAPI Gatewayのプロキシ統合機能です。</p>
+
+<p>API Gatewayで作成したAPIに <code>{proxy+}</code> というパスのリソースを追加することで、そのAPIへのすべてのリクエストをひとつのLambdaに転送できます。マッピングテンプレートやレスポンスのテンプレートも作る必要はなくなり、すべてのリクエスト情報をLambdaに転送して、Lambdaから返ってきた値をそのまま返却するという機能です。詳しくは <a href="http://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/api-gateway-set-up-simple-proxy.html">AWSのドキュメント</a> を参照ください。</p>
+
+<h3 id="クライアントサイドだけを担保する">クライアントサイドだけを担保する</h3>
+
+<p>WWD JAPAN.comではクライアントサイドで実行するHTML+JavaScriptをLambdaでそのまま実行しています。( 厳密にはベンダーのスクリプトを除外したりしてますが )</p>
+
+<p>つまりUniversalでは開発していません。これにはいくつかベネフィットがあります。</p>
+
+<h4 id="集中">集中</h4>
+
+<p>クライアントサイドのために加えた変更は、クライアントサイドでのテストをパスできればリリースできます。クライアントサイドで動くのにサーバサイドで失敗するようなことがなくなり、エンジニアがクライアントサイドの開発に関心を集中させることができます。</p>
+
+<h4 id="継続的デリバリー">継続的デリバリー</h4>
+
+<p>先にも書きましたが、ピュアなSPAならS3の静的ファイルを更新すればデプロイ完了です！</p>
+
+<h4 id="リーン">リーン</h4>
+
+<p>顧客に早く価値を届けて、チームが早く学習していく上では、回避可能な開発をなるべく避けるのが得策です。</p>
+
+<p>Node.jsの中にクライアントサイドの環境を再現するためにはPhantomJSを利用しています。単純なスクレイピングならChromeのヘッドレスモードよりもPhantomJSの方が高速なことを確認しました。…と書きながら思い出したのですが、ちょっとアンフェアな条件下で比較していたかも知れません。ここはまた改めて比較してみたいと思います。</p>
+
+<p>ではまた！</p>
+
+<p>fyi, INFASパブリケーションズでは <a href="https://jobs.forkwell.com/infas-publications/jobs/1255">サーバーレスで一緒に開発してくれるエンジニア</a> を募集しています！</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://infaspublications.github.io/"></a></h4>
+  
+  <p>Read <a href="https://infaspublications.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Tokyo, Japan</span>
+    
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%b9%e3%83%a1%e3%83%87%e3%82%a3%e3%82%a2WWD%20JAPAN.com%e3%82%92%e6%94%af%e3%81%88%e3%82%8bSPA%2bAurora%2b%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%83%ac%e3%82%b9&nbsp;-&nbsp;INFAS%20PUBLICATIONS%20Developer%20Blog&amp;url=https%3a%2f%2finfaspublications.github.io%2fpost%2fspa-aurora-serverless-as-wwdjapan-engine%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2finfaspublications.github.io%2fpost%2fspa-aurora-serverless-as-wwdjapan-engine%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2finfaspublications.github.io%2fpost%2fspa-aurora-serverless-as-wwdjapan-engine%2f&amp;description=%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%b9%e3%83%a1%e3%83%87%e3%82%a3%e3%82%a2WWD%20JAPAN.com%e3%82%92%e6%94%af%e3%81%88%e3%82%8bSPA%2bAurora%2b%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%83%ac%e3%82%b9"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2finfaspublications.github.io%2fpost%2fspa-aurora-serverless-as-wwdjapan-engine%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">INFAS PUBLICATIONS Developer Blog</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    
+</body>
+</html>
+
