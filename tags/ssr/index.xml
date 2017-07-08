@@ -6,6 +6,7 @@
     <description>Recent content in Ssr on INFAS PUBLICATIONS Developer Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Fri, 07 Jul 2017 20:12:00 +0900</lastBuildDate>
     
 	<atom:link href="https://infaspublications.github.io/tags/ssr/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス</title>
       <link>https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
       
       <guid>https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/</guid>
       <description>こんにちは。INFASパブリケーションズでチーフエンジニアをやっている aggre です。主にWWD JAPAN.comというニュースメディアをチームで開発しています。
