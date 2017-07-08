@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>継続的デリバリー on INFAS PUBLICATIONS Developer Blog</title>
+    <link>https://infaspublications.github.io/tags/%E7%B6%99%E7%B6%9A%E7%9A%84%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/</link>
+    <description>Recent content in 継続的デリバリー on INFAS PUBLICATIONS Developer Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 07 Jul 2017 20:12:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://infaspublications.github.io/tags/%E7%B6%99%E7%B6%9A%E7%9A%84%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ニュースメディアWWD JAPAN.comを支えるSPA&#43;Aurora&#43;サーバーレス</title>
+      <link>https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/</link>
+      <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
+      
+      <guid>https://infaspublications.github.io/post/spa-aurora-serverless-as-wwdjapan-engine/</guid>
+      <description>こんにちは。INFASパブリケーションズでチーフエンジニアをやっている aggre です。主にWWD JAPAN.comというニュースメディアをチームで開発しています。
+INFASパブリケーションズは、ファッション専門業界紙「WWD JAPAN」や、そのウェブ版として2012年にローンチした「WWD JAPAN.com」を運営している会社です。ほかにカルチャー誌「STUDIO VOICE」も発行しています。ちなみに「WWD JAPAN」の母体である「WWD」はアメリカで1910年に創刊した結構歴史のある業界紙だったりします。
+SPAとAuroraとサーバーレス 現在、WWD JAPAN.comではフロントエンドをSPA( Single Page Application )、バックエンドをDB以外はサーバーレスアーキテクチャにしています。
+サーバーレスアーキテクチャの定義については AWSによる説明 が分かりやすいです。
+データベースはAuroraを使っているのでサーバーレスではありません。ここ、詳しくは後述します！
+この図はWWD JAPAN.comのアーキテクチャを俯瞰したものです。
+管理者しかアクセスしないエリアを除くと、CloudFront+S3+API Gateway+Lambdaによる構成で、これはウェブサービスにおける最小構成のサーバーレスアーキテクチャではないかと思います。
+記者などの管理者専用画面として、WordPressをEC2で運用していますが、フロントエンドはSPAになっているので管理者以外がEC2にアクセスすることはありません。
+これからの計画として、SPAのPWA( Progressive Web App )への移行や、Auroraを代替するデータベースへの移行を進めたいと考えています。
+現時点においてそれぞれのサービスをWWD JAPAN.comがどのように使っているのか見ていきます。
+CloudFront https://www.wwdjapan.com 以下すべてのリクエストをはじめに受け取ります。そのためにRoute53のALIASレコードをCloudFrontに設定してあります。
+CloudFrontではSSL暗号化と、リクエストに合ったオリジンへの転送をします。基本的にはS3かAPI Gatewayへの転送をすることになります。
+/dist/* だったらS3へ、それ以外はAPI Gatewayへ、という具合です。API Gatewayへの転送はSSR( Server Side Rendering )のためですね。
+S3 フロントエンドで動作するSPAのソースコードと、画像などのアセットを保管しています。
+フロントエンドがSPAになることによって、アプリケーションは静的なHTML, JavaScript, CSS, manifest.json などのテキストファイル だけ で成立します。WWD JAPAN.comではソースコード管理にGitLabのクラウドを使っていますが、デプロイはビルドプロセスを経た成果物をGitLab CIの中からS3に送るだけです。デプロイが高速になって継続的デリバリーにも貢献しています。GitLab CIのパフォーマンス次第ではありますが平均して2分くらいでデプロイができます。
+Lambda SPAからの要求にJSONをレスポンスしたり、SSRを実行します。
+認証の必要なAPIは認証用のLambdaにJWT( JSON Web Token )で生成したトークンを渡すことでLambdaだけで完結させています。認証にJWTを使うことでデータベースへのアクセスが不要となりました。
+WWD JAPAN.comではLambdaに2つのエイリアスを設定しています。 production と dev というエイリアスです。</description>
+    </item>
+    
+  </channel>
+</rss>

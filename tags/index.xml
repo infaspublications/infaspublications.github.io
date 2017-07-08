@@ -48,15 +48,6 @@
     </item>
     
     <item>
-      <title>Continuous Delivery</title>
-      <link>https://infaspublications.github.io/tags/continuous-delivery/</link>
-      <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
-      
-      <guid>https://infaspublications.github.io/tags/continuous-delivery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Lambda</title>
       <link>https://infaspublications.github.io/tags/lambda/</link>
       <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
@@ -75,15 +66,6 @@
     </item>
     
     <item>
-      <title>Serverless</title>
-      <link>https://infaspublications.github.io/tags/serverless/</link>
-      <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
-      
-      <guid>https://infaspublications.github.io/tags/serverless/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Spa</title>
       <link>https://infaspublications.github.io/tags/spa/</link>
       <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
@@ -98,6 +80,24 @@
       <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
       
       <guid>https://infaspublications.github.io/tags/ssr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>サーバーレス</title>
+      <link>https://infaspublications.github.io/tags/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9/</link>
+      <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
+      
+      <guid>https://infaspublications.github.io/tags/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>継続的デリバリー</title>
+      <link>https://infaspublications.github.io/tags/%E7%B6%99%E7%B6%9A%E7%9A%84%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/</link>
+      <pubDate>Fri, 07 Jul 2017 20:12:00 +0900</pubDate>
+      
+      <guid>https://infaspublications.github.io/tags/%E7%B6%99%E7%B6%9A%E7%9A%84%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/</guid>
       <description></description>
     </item>
     
